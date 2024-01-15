@@ -69,7 +69,7 @@ public class RobotContainer {
         () -> driverXbox.getRawAxis(2));
 
     AbsoluteDriveAdv closedAbsoluteDriveAdv = new AbsoluteDriveAdv(drivebase,
-        () -> MathUtil.applyDeadband(driverXbox.getLeftY(),
+        () -> MathUtil.applyDeadband(-1 * driverXbox.getLeftY(),
             OperatorConstants.LEFT_Y_DEADBAND),
         () -> MathUtil.applyDeadband(driverXbox.getLeftX(),
             OperatorConstants.LEFT_X_DEADBAND),
